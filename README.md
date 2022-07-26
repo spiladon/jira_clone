@@ -35,8 +35,11 @@ There are many showcase/example React projects out there but most of them are wa
 - Create an empty `.env` file in `/api`, copy `/api/.env.example` contents into it, and fill in your database username and password.
 - `npm run install-dependencies`
 - `cd api && npm start`
-- `cd client && npm start` in another terminal tab
 - App should now be running on `http://localhost:8080/`
+- Updated versions of tools do run on Postgres 14
+- for node 17.9.0 and npm 8.5.5 got error `error:03000086:digital envelope routines::initialization error` - to get client running use:
+`export NODE_OPTIONS=--openssl-legacy-provider`
+- and then to gt client running - `cd client && npm start` in another terminal tab
 
 ## Running cypress end-to-end tests 🚥
 
