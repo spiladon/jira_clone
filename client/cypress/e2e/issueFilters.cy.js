@@ -2,8 +2,8 @@ import { testid } from '../support/utils';
 
 describe('Issue filters', () => {
   beforeEach(() => {
-    cy.resetDatabase();
-    cy.createTestAccount();
+    // cy.resetDatabase();
+    // cy.createTestAccount();
     cy.visit('/project/board');
   });
 

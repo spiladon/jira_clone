@@ -11,3 +11,6 @@
 **/build
 **/npm-debug.log*
 .idea
+
+client/cypress/videos/*.mp4
+client/cypress/screenshots/*

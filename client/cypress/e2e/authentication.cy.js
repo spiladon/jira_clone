@@ -2,7 +2,7 @@ import { testid } from '../support/utils';
 
 describe('Authentication', () => {
   beforeEach(() => {
-    cy.resetDatabase();
+    // cy.resetDatabase();
     cy.visit('/');
   });
 

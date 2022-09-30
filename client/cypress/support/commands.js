@@ -3,8 +3,8 @@ import 'regenerator-runtime/runtime';
 
 import '@4tw/cypress-drag-drop';
 
-import { objectToQueryString } from 'shared/utils/url';
-import { getStoredAuthToken, storeAuthToken } from 'shared/utils/authToken';
+import { objectToQueryString } from '../../src/shared/utils/url';
+import { getStoredAuthToken, storeAuthToken } from '../../src/shared/utils/authToken';
 
 import { testid } from './utils';
 
