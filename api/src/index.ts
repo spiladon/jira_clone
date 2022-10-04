@@ -3,6 +3,7 @@ import 'dotenv/config';
 import 'reflect-metadata';
 import express from 'express';
 import cors from 'cors';
+import swaggerUi from 'swagger-ui-express';
 
 import createDatabaseConnection from 'database/createConnection';
 import { addRespondToResponse } from 'middleware/response';
@@ -22,6 +23,15 @@ const establishDatabaseConnection = async (): Promise<void> => {
 
 const initializeExpress = (): void => {
   const app = express();
+  app.use(
+    '/docs',
+    swaggerUi.serve,
+    swaggerUi.setup(undefined, {
+      swaggerOptions: {
+        url: '/swagger.json',
+      },
+    }),
+  );
 
   app.use(cors());
   app.use(express.json());
